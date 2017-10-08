@@ -1,7 +1,7 @@
 <Project>
   <PropertyGroup>
     <CoreSetupRid>$(HostRid)</CoreSetupRid>
-    <CoreSetupRid Condition=" '$(HostOSName)' == 'win' or '$(HostOSName)' == 'osx' ">$(HostMonikerRid)</CoreSetupRid>
+    <CoreSetupRid Condition=" ('$(HostOSName)' == 'win' or '$(HostOSName)' == 'osx') and '$(DotNetBuildFromSource)' != 'true' ">$(HostMonikerRid)</CoreSetupRid>
 
     <!-- only the runtime OSX .pkgs have a `-internal` suffix -->
     <InstallerStartSuffix Condition="'$(HostOSName)' == 'osx'">-internal</InstallerStartSuffix>
