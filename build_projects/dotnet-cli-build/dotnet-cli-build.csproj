@@ -23,7 +23,7 @@
     <PackageReference Include="NuGet.Protocol" Version="$(CLI_NuGet_Version)" />
     <PackageReference Include="Microsoft.DotNet.PlatformAbstractions" Version="2.0.0" />
 
-    <PackageReference Include="Microsoft.DotNet.VersionTools" Version="$(VersionToolsVersion)" />
+    <PackageReference Include="Microsoft.DotNet.VersionTools" Version="$(VersionToolsVersion)" Condition="'$(DotNetBuildFromSource)' != 'true'" />
     <PackageReference Include="Microsoft.DotNet.Build.Tasks.Feed" Version="$(BuildTasksFeedToolVersion)" />
     <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="2.0.0" />
  </ItemGroup>
